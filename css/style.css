@@ -16,6 +16,7 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 40px;
 }
 
 body {
@@ -164,4 +165,35 @@ footer {
         border-bottom: 1px solid white;
         padding: 20px;
     }
+}
+
+.navbar a {
+    position: relative;
+    color: #212429;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+.navbar a:hover {
+    color: #FF5733;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FF5733;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.item:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
